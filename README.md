@@ -1,70 +1,64 @@
-🏦 Banking Transaction Management System
-A Banking Transaction Management System built with MySQL, demonstrating database design, stored procedures, transactions, access control, and auditing in a banking use-case.
+# Banking Transaction Management System
 
-✨ Features
+A MySQL-based Banking Transaction Management System showcasing database design, stored procedures, transactions, access control, and auditing for banking operations.
 
-📂 Account Management – Store account balances  
-💸 Fund Transfers – Secure transfers with balance validation  
-📝 Transaction Logs – Deposits & withdrawals recorded with timestamps  
-🔄 Batch Processing – Multiple transfers executed via cursors  
-👤 Access Control – Multiple users with specific privileges  
-📊 Reports – Withdrawals, deposits, and recalculated balances
+## Features
 
+* **Account Management**: Store and manage account balances.
+* **Fund Transfers**: Secure fund transfers with balance validation.
+* **Transaction Logs**: Record deposits and withdrawals with timestamps.
+* **Batch Processing**: Execute multiple transfers using cursors.
+* **Access Control**: Manage multiple users with specific privileges.
+* **Reports**: Generate reports for deposits, withdrawals, and recalculated balances.
 
-📂 Project Files
+## Project Files
 
-account.csv – Sample accounts dataset  
-trnx.csv – Transfer instructions  
-week14.sql – Schema, procedures, reports  
-week14.pdf – Reference documentation
+* `account.csv`: Sample dataset for accounts.
+* `trnx.csv`: Sample transfer instructions.
+* `week14.sql`: SQL script containing schema, stored procedures, and reports.
+* `week14.pdf`: Reference documentation.
 
+## How to Run
 
-🚀 How to Run
+1. **Create the Database**:
 
-Create database
+```sql
 CREATE DATABASE Bank;
 USE Bank;
+```
 
+2. **Run the SQL Script**:
 
-Run the script
+```sql
 SOURCE week14.sql;
+```
 
+3. **Load CSV Data**:
+   * Import `account.csv` into the `account` table.
+   * Import `trnx.csv` into the `move_funds` table.
 
-Load CSV data into tables
+4. **Use Stored Procedures**:
+   * `transfer_funds_1`: Perform a single transfer.
+   * `transfer_funds_2`: Perform a transfer with enhanced validation rules.
+   * `main_transfer_2`: Process multiple transfers in batch.
 
-Import account.csv into the account table.
-Import trnx.csv into the move_funds table.
+5. **Generate Reports**:
+   * Deposits per account.
+   * Withdrawals per account.
+   * Final recalculated balances.
 
+## Skills Demonstrated
 
-Use stored procedures
+* Database Design (MySQL)
+* Stored Procedures & Transactions
+* ACID Properties (Commit/Rollback)
+* User Privileges & Access Control
+* Cursors for Batch Processing
+* Data Integrity & Auditing
 
-transfer_funds_1 → Perform single transfer
-transfer_funds_2 → Perform transfer with enhanced rules
-main_transfer_2 → Process multiple transfers in batch
+## Future Enhancements
 
-
-Generate reports
-
-Deposits per account
-Withdrawals per account
-Final recalculated balances
-
-
-
-
-🔑 Skills Demonstrated
-
-Database Design (MySQL)
-Stored Procedures & Transactions
-ACID Properties (Commit/Rollback)
-User Privileges & Access Control
-Cursors for Batch Processing
-Data Integrity & Auditing
-
-
-🚀 Future Enhancements
-
-Interest calculation & monthly statements
-Role-based access (Admin vs Cashier)
-Fraud detection triggers
-Dashboard for visualization
+* Interest calculation and monthly statements.
+* Role-based access control (Admin vs. Cashier).
+* Fraud detection triggers.
+* Dashboard for data visualization.
